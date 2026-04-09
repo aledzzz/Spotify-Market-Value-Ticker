@@ -1,6 +1,6 @@
-# Music Identification and Data Valuation Tool 
+# Spotify Market Value Ticker 
 
-Spotify Market Value Ticker is a Fintech-inspired "Shazam" that indentifies music via audio fingerprinting and calculates the estimated gross/net revenue royalties based on the 2026 music industry standards.
+Fintech-inspired "Shazam" that indentifies music via audio fingerprinting and calculates the estimated gross/net revenue royalties based on the 2026 music industry standards.
 
 # Prerequistes
 - Python 3.10+
