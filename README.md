@@ -34,11 +34,4 @@ where to find api keys: https://developer.spotify.com/
 ```
 python main.py
 ```
-# How to Make Changes to Main Code
-1. Fork Repository
-2. Create Branch (`git checkout -b "branch name"`)
-3. Stage Changes (`git add .`)
-4. Commit new changes (`git commit -m "enter message here"`)
-5. Push changes to main branch (`git push origin main`)
-
 
