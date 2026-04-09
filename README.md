@@ -9,22 +9,24 @@ Spotify Market Value Ticker is a Fintech-inspired "Shazam" that indentifies musi
 
 # Setup
 1.) Clone the repository
-'''
+```
 https://github.com/aledzzz/Spotify-Market-Value-Ticker.git
-'''
+```
 2.) Create a virtual environment
-'''
+```
 python -m venv venv
-'''
+```
 3.) Install dependencies
-'''
+```
 pip install -r requirements.txt
-'''
+```
 4.) Add Spotify API Keys to '.env' file
-
+```
+where to find api keys: https://developer.spotify.com/
+```
 5.) Run
-'''
+```
 python main.py
-'''
+```
 
 
