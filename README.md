@@ -2,6 +2,12 @@
 
 Spotify Market Value Ticker is a Fintech-inspired "Shazam" that indentifies music via audio fingerprinting and calculates the estimated gross/net revenue royalties based on the 2026 music industry standards.
 
+# Prerequistes
+- Python 3.10+
+- FFmpeg 7.0+
+- Spotify Premium (needed in order to access Spotify Web API credentials)
+- pip install manager 
+
 # Key Features
 - Audio Fingerprinting: Using 'librosa' to map acoustic data
 - Market Valuation: Calculates estimated revenue using the current industry baseline ($0.004 per stream)
