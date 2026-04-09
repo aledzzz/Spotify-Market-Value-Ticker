@@ -1,0 +1,15 @@
+# --- Core ---
+python-dotenv>=1.0.1    # Loads your .env keys securely
+
+# --- Audio ---
+librosa>=0.11.0         # For spectrograms and audio analysis
+sounddevice>=0.5.1      # Modern, stable mic recording for Windows 11
+numpy>=1.26.4           # Math backbone for audio fingerprints
+scipy>=1.13.0           # For Signal Processing (FFT logic)
+
+# --- Data ---
+spotipy>=2.26.0         # Latest 2026 Spotify API wrapper
+pandas>=2.2.1           # Organizing royalty data and history
+
+# --- Visualization ---
+matplotlib>=3.8.3       # For plotting your "Constellation Map"
