@@ -7,6 +7,7 @@ Fintech-inspired music streaming portfolio that indentifies music via a user's t
 - pip install manager 
 
 # Key Features
+- Top 5 Tracks: Fetches a user's top 5 tracks over a 12-month period using Last.fm API
 - Market Valuation: Calculates estimated revenue using the current industry baseline ($0.004 per stream)
 - Monetization Floor: Flags tracks that have reached 1,000 streams within a rolling 12-month period
 
