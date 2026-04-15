@@ -13,7 +13,7 @@ Fintech-inspired music streaming portfolio that indentifies music via a user's t
 # Setup
 1.) Clone the repository
 ```
-
+https://github.com/aledzzz/Streamfolio.git 
 ```
 2.) Create a virtual environment
 ```
