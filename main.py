@@ -1,29 +1,22 @@
-from dotenv import load_dotenv
-import os
+import pygame
+import requests
+from io import BytesIO
 
-load_dotenv()
+def get_pygame_image(url):
+    """Converts a web URL into a surface Pygame can draw."""
+    if not url:
+        # Fallback to a generic Gator-Blue surface if no image is found
+        surf = pygame.Surface((150, 150))
+        surf.fill((0, 33, 165))
+        return surf
 
-def main():
-    print("Welcome to the Spotify Market Value Ticker!")
-
-    # include audio and data processing here
-
-    # record 10 seconds of audio (include code here)
-    print("Play song now...")
-
-    # process and analyze the audio to identify the song
-    # include test track to see if API works correctly
-    song_title = "Test Song"
-    artist_name = "Test Artist"
-
-    # run the valuation
-    print(f"Generating market value for: {song_title} by {artist_name}")
-    reported_valuation = 1000000 #placeholder
-
-    #displaty the market dashboard
-    print("----------")
-    print(f"Track: {song_title} | Artist: {artist_name}")
-    print(f"Estimated Market Value: ${reported_valuation:.2f}")
+    response = requests.get(url)
+    # Wrap the binary content in BytesIO so Pygame can 'read' it like a file
+    img_data = BytesIO(response.content)
+    img = pygame.image.load(img_data)
+    
+    # Standardize the size for your gallery
+    return pygame.transform.scale(img, (150, 150))
 
 if __name__ == "__main__":
-    main()
+    main() 
