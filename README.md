@@ -32,6 +32,7 @@ pip install -r requirements.txt
 client_id = "####"
 client_secret = "####"
 redirect_url = "http://127.0.0.1:8000/callback"
+scope = "user-top-read"
 ```
 5.) Run
 ```
