@@ -3,7 +3,7 @@
 A Fintech-style Pygame program that displays a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards.
 
 # Prerequistes
-- Python 3.10+
+- Python 3.11+
 - Last.fm account (grab a free API key here: https://www.last.fm/api/account/create)
 - pip install manager 
 

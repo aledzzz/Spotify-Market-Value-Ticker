@@ -8,16 +8,7 @@ env/
 __pycache__/
 *.py[cod]
 
-# --- Audio Files ---
-*.wav
-*.mp3
-*.m4a
-
 # --- IDE---
 .vscode/
 .DS_Store
 Thumbs.db
-
-# --- Project Specific ---
-outputs/
-fingerprint_db.json
