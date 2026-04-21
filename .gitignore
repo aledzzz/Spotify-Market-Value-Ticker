@@ -1,14 +1,6 @@
-# --- Security ---
 .env
-
-# --- Python Environment ---
 venv/
-env/
-.venv/
 __pycache__/
-*.py[cod]
-
-# --- IDE---
-.vscode/
-.DS_Store
-Thumbs.db
+streamfolio.db
+tableau_data.csv
+.cache
