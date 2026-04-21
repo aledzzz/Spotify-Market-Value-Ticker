@@ -1,10 +1,12 @@
 # Streamfolio 
 
-A Fintech-style Pygame program that displays a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards.
+An end-to-end Fintech pipeline dashboard built to display a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards. Also focusing on real-time automation, this program vaults portfolio data into a local SQLite database and automatically generates CSV files for visualization in Tableau. 
 
 # Prerequistes
 - Python 3.11+
-- Last.fm account (grab a free API key here: https://www.last.fm/api/account/create)
+- Spotify API Developer Account (grab Spotify API key here: https://developer.spotify.com/)
+- Tableau Desktop Liscense
+- SQLite 3 Editor (IDE extension)
 - pip install manager 
 
 # Key Features
@@ -25,9 +27,11 @@ python -m venv venv
 ```
 pip install -r requirements.txt
 ```
-4.) Add your Last.fm API key to the .env file
+4.) Add your Spotify API keys to the .env file (redirect_url provided below)
 ```
-LASTFM_API_KEY = "input key here"
+client_id = "####"
+client_secret = "####"
+redirect_url = "http://127.0.0.1:8000/callback"
 ```
 5.) Run
 ```
