@@ -4,13 +4,13 @@ An end-to-end Fintech pipeline dashboard built to display a user's music portfol
 
 # Prerequistes
 - Python 3.11+
-- Spotify API Developer Account (grab Spotify API key here: https://developer.spotify.com/)
+- Spotify and Spotipy API (grab Spotify API key here: https://developer.spotify.com/)
 - Tableau Desktop Liscense
 - SQLite 3 Editor (IDE extension)
 - pip install manager 
 
 # Key Features
-- Top 5 Tracks: Fetches a user's top 5 tracks over a 12-month period using Last.fm API
+- Top 5 Tracks: Fetches a user's top 5 tracks over a 12-month period using Spotify API
 - Market Valuation: Calculates estimated revenue using the current industry baseline ($0.004 per stream & ~30% platform cut)
 - Monetization Floor: Flags tracks that have reached 1,000 streams within a rolling 12-month period
 
@@ -29,10 +29,10 @@ pip install -r requirements.txt
 ```
 4.) Add your Spotify API keys to the .env file (redirect_url provided below)
 ```
-client_id = "####"
-client_secret = "####"
-redirect_url = "http://127.0.0.1:8000/callback"
-scope = "user-top-read"
+CLIENT_ID = "client id here"
+CLIENT_SECRET = "client secret here"
+REDIRECT_URI = "http://127.0.0.1:8000/callback"
+SCOPE = "user-top-read"
 ```
 5.) Run
 ```
