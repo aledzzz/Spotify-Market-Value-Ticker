@@ -20,7 +20,7 @@ def load_image(url):
 def audio_preview(url):
     if url:
         response = requests.get(url)
-        audio_file = BytesIO(requests.content)
+        audio_file = BytesIO(response.content)
         pygame.mixer.music.load(audio_file)
         pygame.mixer.music.play()
     else:
@@ -28,7 +28,23 @@ def audio_preview(url):
         print("No preview available for this track.")
 
 def main():
+    engine = MusicData()
+    db = Database()
 
+    print("Fetching Top 5 Tracks...")
+    portfolio_data = engine.get_portfolio_data()
+
+    covers = []
+    rects = []
+    for i, j in enumerate(portfolio_data):
+        covers.append(load_image(j['album_img']))
+        rects.append(pygame.Rect(40 + (i * 100), 80, 160, 160))
+
+    selected_index = None
+    running_track = True
+
+    while running_track:
+        screen.fill((255, 255, 255))
 
 
 if __name__ == "__main__":
