@@ -27,7 +27,7 @@ python -m venv venv
 ```
 pip install -r requirements.txt
 ```
-4.) Add your Spotify API keys to the .env file (redirect_url provided below)
+4.) Add your Spotify API keys to the .env file (REDIRECT_URI provided below)
 ```
 CLIENT_ID = "client id here"
 CLIENT_SECRET = "client secret here"
