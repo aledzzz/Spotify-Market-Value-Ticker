@@ -7,7 +7,7 @@ from music_data import MusicData
 pygame.init()
 pygame.mixer.init()
 
-screen = pygame.display.set_mode((400,300))
+screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Streamfolio")
 title_font = pygame.font.SysFont("Arial", 24, bold = True)
 font_data = pygame.font.SysFont("Arial", 18)
@@ -15,7 +15,7 @@ font_data = pygame.font.SysFont("Arial", 18)
 def load_image(url):
     response = requests.get(url)
     image = pygame.image.load(BytesIO(response.content))
-    return pygame.transform.scale(image, (200, 400))
+    return pygame.transform.scale(image, (160, 160))
 
 def audio_preview(url):
     if url:

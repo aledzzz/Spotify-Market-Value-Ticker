@@ -2,5 +2,5 @@
 venv/
 __pycache__/
 streamfolio.db
-tableau_data.csv
+streamfolio_portfolio.csv
 .cache
