@@ -32,8 +32,9 @@ class Database:
             
             for track in portfolio_data:
                 cursor.execute('''
-                    INSERT INTO streams (track_id, track_name, artist_name, album_img, total_streams, gross, platform_fee, net_royalty_pool)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    INSERT OR REPLACE INTO streams 
+                    (track_id, track_name, artist_name, album_img, total_streams, gross, platform_fee, net_royalty_pool, timestamp)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, CURRENT_DATE)
             ''', (
                 track.get('track_id'),
                 track.get('name'),
