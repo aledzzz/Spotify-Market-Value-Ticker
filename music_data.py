@@ -28,8 +28,8 @@ class MusicData:
             
             # Grab the first image URL if it exists
             album_img = track['album']['images'][0]['url'] if track['album']['images'] else None
-            preview_url = track['preview_url']
-            popularity = track['popularity']
+            preview_url = track.get('preview_url')
+            popularity = track.get('popularity', 0)
 
             # Estimate streams (Popularity is 1-100, this formula generates realistic numbers)
             est_streams = int((popularity ** 3) * 2.5)

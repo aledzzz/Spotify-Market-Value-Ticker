@@ -17,15 +17,6 @@ def load_image(url):
     image = pygame.image.load(BytesIO(response.content))
     return pygame.transform.scale(image, (160, 160))
 
-def audio_preview(url):
-    if url:
-        response = requests.get(url)
-        audio_file = BytesIO(response.content)
-        pygame.mixer.music.load(audio_file)
-        pygame.mixer.music.play()
-    else:
-        pygame.mixer.music.stop()
-        print("No preview available for this track.")
 
 def main():
     engine = MusicData()
@@ -44,7 +35,7 @@ def main():
     running_track = True
 
     while running_track:
-        screen.fill((255, 255, 255))
+        screen.fill((20, 20, 20))
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -54,7 +45,6 @@ def main():
                 for i, j in enumerate(rects):
                     if j.collidepoint(event.pos):
                         selected_index = i
-                        audio_preview(portfolio_data[i]['preview_url'])
             
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_s:
