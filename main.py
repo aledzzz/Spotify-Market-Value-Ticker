@@ -65,12 +65,11 @@ def main():
             y = 300
             lines = [
                 (f"TRACK: {track['name']} | ARTIST: {track['artist']}"),
-                (f"SPOTIFY POPULARITY:  {track['popularity']} / 100"),
                 (f"EST. GLOBAL STREAMS: {track['est_streams']:,}"),
                 (f"--------------------------------------------------"),
-                (f"EST. GROSS:          ${track['finances']['gross']:.2f}"),
+                (f"EST. GROSS: ${track['finances']['gross']:.2f}"),
                 (f"PLATFORM CUT (30%): -${track['finances']['fee']:.2f}"),
-                (f"NET ROYALTY POOL:    ${track['finances']['net']:.2f}")
+                (f"EST. NET ROYALTY POOL: ${track['finances']['net']:.2f}")
             ]
             for line in lines:
                 color = (250, 70, 22) if "NET" in line else (255, 255, 255)
