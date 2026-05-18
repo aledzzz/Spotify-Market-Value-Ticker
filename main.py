@@ -7,7 +7,6 @@ from music_data import MusicData
 pygame.init()
 pygame.mixer.init()
 
-screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Streamfolio")
 title_font = pygame.font.SysFont("Arial", 24, bold = True)
 font_data = pygame.font.SysFont("Arial", 18)
@@ -24,6 +23,7 @@ def main():
 
     print("Fetching Top 5 Tracks...")
     portfolio_data = engine.get_portfolio_data()
+    screen = pygame.display.set_mode((800, 600))
 
     covers = []
     rects = []
@@ -48,11 +48,10 @@ def main():
             
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_s:
-                    print("Initializing pipeline...")
                     db.portfolio(portfolio_data)
                     db.export()
         
-        instruction = font_data.render("Click an album to view metrics | Press 'S' to Export to Tableau", True, (255, 255, 255))
+        instruction = font_data.render("Click an album to view metrics (Press 'S' to Export)", True, (255, 255, 255))
         screen.blit(instruction, (40, 20))
 
         for i, img in enumerate(covers):
@@ -65,8 +64,7 @@ def main():
             y = 300
             lines = [
                 (f"TRACK: {track['name']} | ARTIST: {track['artist']}"),
-                (f"EST. GLOBAL STREAMS: {track['est_streams']:,}"),
-                (f"--------------------------------------------------"),
+                (f"GLOBAL STREAMS: {track['est_streams']:,}"),
                 (f"EST. GROSS: ${track['finances']['gross']:.2f}"),
                 (f"PLATFORM CUT (30%): -${track['finances']['fee']:.2f}"),
                 (f"EST. NET ROYALTY POOL: ${track['finances']['net']:.2f}")

@@ -45,7 +45,6 @@ class Database:
                 track.get('platform_fee'),
                 track.get('net_royalty_pool')
             ))
-            print("Data saved!")
 
     def export(self):
         with sqlite3.connect(self.database_name) as conn:
