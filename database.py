@@ -22,7 +22,7 @@ class Database:
                     platform_fee REAL,
                     net_royalty_pool REAL,
                     timestamp DATE DEFAULT CURRENT_DATE,
-                    UNIQUE(track_id, timestamp)
+                    UNIQUE(track_id) 
                 )
             ''')
         
