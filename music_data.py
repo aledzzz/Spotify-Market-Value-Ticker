@@ -58,7 +58,7 @@ class MusicData:
                     })
                 return portfolio
             except (SpotifyException, Exception) as e:
-                print(f"\nSpotify API unavailable [i stopped paying for spotify premium, sorry :( ]")
+                print(f"\nSpotify API unavailable, which basically means i stopped paying for spotify premium :(")
         
         # Fallback to database if premium is unavailable
         return self._get_data_from_db()
@@ -77,13 +77,12 @@ class MusicData:
         
         # Failsafe for visuals incase the database is missing or empty
         mock_ui_data = [
-            ("1", "delusional", "Ken Carson", "https://i.scdn.co/image/ab67616d0000b273046eeb267309a2237cff41c7"),
-            ("2", "Habits", "OsamaSon", "https://i.scdn.co/image/ab67616d0000b27341d8c624c257ffccbca8c3ad"),
-            ("3", "I Rot, I Rot.", "Che", "https://i.scdn.co/image/ab67616d0000b2734b663f097a55ffafd8cab0e0"),
-            ("4", "I Thought She Knew", "*NSYNC", "https://i.scdn.co/image/ab67616d0000b273a6cb8fab778e1efc406a5909"),
-            ("5", "Studio Addict", "Nine Vicious", "https://i.scdn.co/image/ab67616d0000b273ec498907d4d654cf5dfd66cd")
+            ("5116BQqgzOZ24Dx0ZKkagU", "delusional", "Ken Carson", "https://i.scdn.co/image/ab67616d0000b273046eeb267309a2237cff41c7"),
+            ("2XMwyntBTC3OgWE2N2wXoX", "Habits", "OsamaSon", "https://i.scdn.co/image/ab67616d0000b27341d8c624c257ffccbca8c3ad"),
+            ("6S2Uwo1I2uwyDh7IUx23MM", "I Rot, I Rot.", "Che", "https://i.scdn.co/image/ab67616d0000b2734b663f097a55ffafd8cab0e0"),
+            ("0b4u7IhBY61kSmS8wVIPYg", "I Thought She Knew", "*NSYNC", "https://i.scdn.co/image/ab67616d0000b273a6cb8fab778e1efc406a5909"),
+            ("73N42Wpc7RQPiOTgSAEimm", "Studio Addict", "Nine Vicious", "https://i.scdn.co/image/ab67616d0000b273ec498907d4d654cf5dfd66cd")
         ]
-
         rows = []
         try:
             with sqlite3.connect("streamfolio.db") as conn:
@@ -97,7 +96,6 @@ class MusicData:
             pass
 
         if not rows:
-            print("[Notice] Database is empty. Injecting hardcoded visuals for UI testing...")
             rows = [(m[0], m[1], m[2], m[3], current_streams[m[1]]) for m in mock_ui_data]
             
         for row in rows:
