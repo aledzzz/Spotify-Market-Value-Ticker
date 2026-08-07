@@ -50,3 +50,6 @@ SCOPE = "user-top-read"
 python main.py
 ```
 
+[!IMPORTANT]
+Due to the loss of my Spotify Premium subscription, I revamped the project to include a offline fallback mechanism. If the live API is empty or missing, the system intercepts the exception and injects a hardcoded mock dataset—allowing the UI, Tableau exports, and data visualizations to remain fully operational without crashing.
+
