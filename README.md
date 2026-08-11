@@ -5,7 +5,6 @@ An end-to-end Fintech pipeline dashboard built to display a user's music portfol
 # Prerequistes
 - Python 3.11+
 - Spotify and Spotipy API (grab Spotify API key here: https://developer.spotify.com/)
-- Tableau Desktop Liscense
 - SQLite 3 Editor (IDE extension)
 - pip install manager 
 
