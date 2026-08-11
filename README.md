@@ -2,6 +2,8 @@
 
 An end-to-end Fintech pipeline dashboard built to display a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards. Also focusing on real-time automation, this program vaults portfolio data into a local SQLite database and automatically generates CSV files to use within data visualization platforms.
 
+![Streamfolio Demo](Streamfolio.gif)
+
 # Prerequistes
 - Python 3.11+
 - Spotify and Spotipy API (grab Spotify API key here: https://developer.spotify.com/)
