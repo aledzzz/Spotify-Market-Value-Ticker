@@ -1,6 +1,6 @@
 # Streamfolio 
 
-An end-to-end Fintech pipeline dashboard built to display a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards. Also focusing on real-time automation, this program vaults portfolio data into a local SQLite database and automatically generates CSV files for visualization in Tableau. 
+An end-to-end Fintech pipeline dashboard built to display a user's music portfolio based on their top 5 tracks and calculates the estimated gross/net revenue royalties using the 2026 music industry standards. Also focusing on real-time automation, this program vaults portfolio data into a local SQLite database and automatically generates CSV files to use within data visualization platforms.
 
 # Prerequistes
 - Python 3.11+
